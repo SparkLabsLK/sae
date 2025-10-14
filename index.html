@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAE - Sustainable Action Engine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌿 Sustainable Action Engine (SAE)</h1>
+    <nav>
+      <button onclick="showTool('carbon')">Carbon Footprint</button>
+      <button onclick="showTool('foodmile')">Food Mile</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="carbon" class="tool-section">
+      <h2>Carbon Footprint Calculator</h2>
+      <label>Distance traveled (km): <input type="number" id="distance" /></label>
+      <label>Vehicle emission factor (kg CO₂/km): <input type="number" id="emissionFactor" value="0.12" /></label>
+      <button onclick="calculateCarbon()">Calculate</button>
+      <p id="carbonResult"></p>
+    </section>
+
+    <section id="foodmile" class="tool-section" style="display:none">
+      <h2>Food Mile Calculator</h2>
+      <label>Distance (km): <input type="number" id="foodDistance" /></label>
+      <label>Transport Mode:
+        <select id="transportMode">
+          <option value="0.02">Ship (0.02 kg CO₂/km/kg)</option>
+          <option value="0.05">Truck (0.05 kg CO₂/km/kg)</option>
+          <option value="0.15">Air (0.15 kg CO₂/km/kg)</option>
+        </select>
+      </label>
+      <label>Weight (kg): <input type="number" id="foodWeight" /></label>
+      <button onclick="calculateFoodMile()">Calculate</button>
+      <p id="foodMileResult"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sustainable Action Engine</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
