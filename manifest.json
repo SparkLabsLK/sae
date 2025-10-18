@@ -1,0 +1,16 @@
+{
+  "name": "Sustainable Action Engine",
+  "short_name": "SAE",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f0fdf4",
+  "theme_color": "#2d6a4f",
+  "description": "Tools to support climate-conscious decisions through carbon and food mile calculators.",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "48x48"
+    }
+  ]
+}
